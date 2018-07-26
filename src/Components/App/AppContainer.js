@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import AppPresenter from "./AppPresenter";
+import Store from "store";
 
 class AppContainer extends Component {
   render() {
-    return <AppPresenter />
+    return (
+      <Store.Provider>
+        <AppPresenter />
+      </Store.Provider>
+    )
   }
 }
 
